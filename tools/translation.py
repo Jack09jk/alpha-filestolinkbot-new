@@ -28,6 +28,6 @@ Size: {}
 Expiry: {} days
 Link : {}
 
-<i>Join our channel</i> @filestolink
+<i>Join our channel</i> @Evilzon3
     """
     ABUSIVE_USERS = "You got BANNED bro..."
