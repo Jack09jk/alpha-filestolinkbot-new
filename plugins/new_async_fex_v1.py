@@ -95,7 +95,7 @@ async def get_link(bot, update):
 
     # upload
     session = aiohttp.ClientSession()
-    async with session.get('https://api.fex.net/api/v1/anonymous/upload-token') as resp:
+    async with session.get('https://api.fex.net/api/v1/s/upload-token') as resp:
         token = json.loads((await resp.text()))['token']
         
     print(token)
@@ -115,7 +115,7 @@ async def get_link(bot, update):
         'Cache-Control': ' no-cache',
         'TE': ' Trailers'
     }
-    async with session.post('https://api.fex.net/api/v1/anonymous/file', data=json.dumps(data), headers=headers) as resp:
+    async with session.post('https://api.fex.net/api/v1/s/file', data=json.dumps(data), headers=headers) as resp:
         file_upload = json.loads(await resp.text())
         print(file_upload['location'])
         
